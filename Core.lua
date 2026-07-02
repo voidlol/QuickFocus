@@ -40,12 +40,11 @@ end
 local function GetMacroText(db)
     local lines = { "/focus mouseover" }
     if db.setMark and db.markNumber and db.markNumber >= 1 and db.markNumber <= 8 then
-        -- /tm ~N: set marker only if the target has no marker yet.
-        local markCmd = "/tm ~" .. db.markNumber
+        local markArg = "~" .. db.markNumber
         if db.safeMark then
-            lines[#lines + 1] = markCmd .. " [@focus,exists,help][@focus,exists,harm]"
+            lines[#lines + 1] = "/tm [@focus,exists,help][@focus,exists,harm] " .. markArg
         else
-            lines[#lines + 1] = markCmd .. " [@focus,exists]"
+            lines[#lines + 1] = "/tm [@focus,exists] " .. markArg
         end
     end
     return table.concat(lines, "\n")
