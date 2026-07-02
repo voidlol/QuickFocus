@@ -1,0 +1,11 @@
+## Interface: 120007
+## Title: QuickFocus
+## Notes: Modifier + Click on unit frames to set focus. No dependencies required.
+## Author: Extracted from ElvUI_WindTools
+## Version: 1.0.0
+## SavedVariables: QuickFocusDB
+
+Core.lua
+Modules\Blizzard.lua
+Modules\ElvUI.lua
+Modules\EllesmereUI.lua
